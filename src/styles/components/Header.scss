@@ -1,0 +1,67 @@
+@import '../_utility.scss';
+
+header {
+	width: 100%;
+	max-width: 1240px;
+	height: 68px;
+	top: 40px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+
+}
+
+.header_logo{
+		width: 110.32px;
+		height: 68px;
+		left: 100px;
+}
+
+nav {
+	top: 40px;
+	width: 100%;
+	max-width: 309px;
+	height: 68px;
+	display: flex;
+	justify-content: space-around;
+}
+
+ul {
+	list-style: none;
+	color: #ff6060;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+nav-items {
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.nav-link {
+	//color: #ff6060;
+	color: $color-primary;
+	text-decoration: none;
+	font-size: 24px;
+	text-align: center;
+	font-weight: 700;
+	font-style: normal;
+	display: block;
+	height: 68px;
+	line-height: 68px;
+	font-style: mont;
+}
+
+.nav-link-actived {
+	color: #ff6060;
+	text-decoration: none;
+	border-bottom: 2px solid #ff6060;
+	font-size: 24px;
+	text-align: center;
+	font-weight: 700;
+	font-style: normal;
+}
