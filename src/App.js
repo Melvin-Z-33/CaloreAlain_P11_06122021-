@@ -3,7 +3,6 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Notfound from './pages/Notfound';
 import Housings from './pages/Housings';
-import Tot from './pages/Tot';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 

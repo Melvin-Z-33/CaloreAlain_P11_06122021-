@@ -2,6 +2,7 @@
 $color-primary: #ff6060;
 $color-lightgrey: #f7f7f7;
 $color-darkgrey: #c4c4c4;
+$color-white:white;
 
 $width-standard: 85%;
 
@@ -9,6 +10,7 @@ $border-radius-standard: 25px;
 $border-radius-small: 10px;
 
 // fonts
+
 
 // Utilitaires Position/dimension
 
@@ -59,4 +61,16 @@ $breakpoints: (
 	line-height: 68px;
 	letter-spacing: 0em;
 	text-align: left;
+}
+
+
+%font18{
+	font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 26px;
+letter-spacing: 0em;
+text-align: left;
+
 }

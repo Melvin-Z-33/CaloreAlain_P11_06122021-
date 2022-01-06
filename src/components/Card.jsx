@@ -7,8 +7,8 @@ class Card extends React.Component {
 		return (
 			<Link to={`/accommodation/${this.props.id}`} className="card" id={this.props.id}>
 				<img src={this.props.cover} className="card__img" alt="card-img" />
-				<div className="linear-gradient"></div>
-				<p>{this.props.title}</p>
+				
+				<p className="card__title">{this.props.title}</p>
 			</Link>
 		);
 	}

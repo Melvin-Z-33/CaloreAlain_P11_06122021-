@@ -1,13 +1,13 @@
 import React from 'react';
+import BlockInfo from '../components/BlockInfo';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 import imgBackground from '../assets/about/gustavo-alves-YOXSC4zRcxw-unsplash 1.png';
 //import { withRouter } from 'react-router-dom';
 // import '../../style/components/Banner.scss';
 // import { about } from '../../kasa_about';
-import Footer from '../components/Footer';
 // import mountains from '../../assets/moutains.png';
 // import '../../style/layout/about.scss';
-import BlockInfo from '../components/BlockInfo';
-import Header from '../components/Header';
 
 class About extends React.Component {
 	constructor(props) {
@@ -30,6 +30,7 @@ class About extends React.Component {
 
 	render() {
 		console.log(this.state.test);
+
 		return (
 			<section className="about">
 				<Header />

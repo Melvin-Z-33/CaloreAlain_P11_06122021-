@@ -12,14 +12,11 @@ class Header extends React.Component {
 					<img src={logo} className="header_logo" alt="Kasa" />
 				</Link>
 				<nav className="navbar">
-					<Link to="/" className="nav-link">
+					<Link to="/" className="nav__link">
 						Accueil
 					</Link>
-					<Link to="/about" className="nav-link">
+					<Link to="/about" className="nav__link">
 						À propos
-					</Link>
-					<Link to="/tot" className="nav-link">
-						toto
 					</Link>
 				</nav>
 			</header>
