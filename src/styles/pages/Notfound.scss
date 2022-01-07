@@ -6,7 +6,7 @@ body {
 
 .error {
 	text-align: center;
-	padding: 10%;
+
 	&__number {
 		font-weight: bold;
 		font-size: 250px;
@@ -16,7 +16,13 @@ body {
 		font-size: 30px;
 	}
 	&__backHome {
+		color: inherit;
+		width: 284px;
+		height: 26px;
 		font-size: 18px;
+		@extend %font18;
+		margin: 182px auto 0;
+		text-align: center;
 		text-decoration: underline;
 	}
 }

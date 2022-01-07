@@ -7,6 +7,7 @@ import Rating from '../components/Rating';
 import Tags from '../components/Tags';
 import { housings } from './logements';
 
+
 export default class Housings extends React.Component {
 	render() {
 		console.log(housings);
@@ -16,7 +17,9 @@ export default class Housings extends React.Component {
 			return housing.id === id;
 		});
 		return (
+
 			<div>
+			<Header/>
 				<Carousel pictures={housings[index].pictures} />
 
 				<div className="housing_info">

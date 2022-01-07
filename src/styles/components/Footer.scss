@@ -1,17 +1,16 @@
 @import '../_utility.scss';
 
-footer{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 209px;
-    width: 100%;
-    left: -543px;
-    top: 4333px;
-    background: #000000;
-    color :white;
-
-
-      
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 209px;
+	max-width: 1240px;
+	width: 100%;
+	margin: 0 auto;
+	// left: -543px;
+	top: 4333px;
+	background: #000000;
+	color: white;
 }
