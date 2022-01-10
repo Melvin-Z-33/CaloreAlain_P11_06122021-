@@ -1,7 +1,8 @@
 import React from 'react';
 import '../styles/components/DropdownBlock.scss';
 import '../styles/components/Dropdown.scss';
-
+import arrowDown from '../assets/arrow/arrow-down.svg';
+import arrowUp from '../assets/arrow/arrow-up.png';
 class Dropdown extends React.Component {
 	constructor(props) {
 		super(props);
@@ -14,28 +15,33 @@ class Dropdown extends React.Component {
 		this.setState({
 			isActive: true,
 		});
-		console.log('show');
 	};
 
 	handleHide = () => {
 		this.setState({
 			isActive: false,
 		});
-		console.log('hide');
 	};
 
 	render() {
 		return (
-			<div className="dropdown" key={this.props.key}>
-				<h2
-					className="dropdown-header"
-					style={{ cursor: 'pointer' }}
-					onClick={
-						this.state.isActive ? () => this.handleHide() : () => this.handleShow()
-					}
-				>
-					{this.props.title}
-				</h2>
+			<div className="dropdown" key={this.props.id}>
+				<div className="dropdown-header">
+					<h2
+						className="dropdown-title"
+						style={{ cursor: 'pointer' }}
+						onClick={
+							this.state.isActive ? () => this.handleHide() : () => this.handleShow()
+						}
+					>
+						{this.props.title}
+					</h2>
+					{this.state.isActive ? (
+						<img src={arrowUp} alt="" className="arrow arrow--up" />
+					) : (
+						<img src={arrowDown} alt="" className="arrow arrow--down" />
+					)}
+				</div>
 				{this.state.isActive ? (
 					<p className="dropdown-text">{this.props.description}</p>
 				) : null}

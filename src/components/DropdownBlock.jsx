@@ -6,32 +6,22 @@ class DropdownBlock extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			isActive: false,
 			tot: this.props.text,
 		};
 	}
 
-	handleShow = (index) => {
-		this.setState({
-			isActive: true,
-		});
-		console.log(index);
-	};
-
-	handleHide = (index) => {
-		this.setState({
-			isActive: false,
-		});
-		console.log(index);
-	};
-
 	render() {
 		//const { test } = this.state;
+		console.log('aa');
 		return (
-			<section className="detail-block">
+			<section className="block-info" key="123">
 				{this.props.txt.map((pres) => (
 					<>
-						<Dropdown key={pres.id} title={pres.title} description={pres.description} />
+						<Dropdown
+							key={pres.id.toString()}
+							title={pres.title}
+							description={pres.description}
+						/>
 					</>
 				))}
 			</section>

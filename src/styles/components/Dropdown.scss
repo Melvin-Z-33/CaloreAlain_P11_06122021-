@@ -1,1 +1,28 @@
 @import '../_utility.scss';
+
+.dropdown {
+	max-width: 1023px;
+
+	height: auto;
+	margin: 0 auto 30px;
+	background-color: $color-primary;
+	color: $color-white;
+	border-radius: 5px;
+	position: relative;
+
+	.dropdown-header {
+		display: flex;
+		justify-content: space-between;
+		padding: 6px 20px;
+	}
+	.dropdown-text {
+		max-width: 1023px;
+		height: 146px;
+		left: 0px;
+		top: 38px;
+		border-radius: 5px;
+		background-color: $color-lightgrey;
+		color: $color-primary;
+		margin-bottom: 30px;
+	}
+}
