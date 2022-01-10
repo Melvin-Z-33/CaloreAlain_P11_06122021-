@@ -1,5 +1,5 @@
 import React from 'react';
-import BlockInfo from '../components/BlockInfo';
+import DropdownBlock from '../components/DropdownBlock';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import imgBackground from '../assets/about/gustavo-alves-YOXSC4zRcxw-unsplash 1.png';
@@ -30,14 +30,13 @@ class About extends React.Component {
 
 	render() {
 		console.log(this.state.test);
-
 		return (
 			<section className="about">
 				<Header />
 				<div className="banner">
 					<img src={imgBackground} className="banner__img" alt="banner_img_moutains" />
 				</div>
-				<BlockInfo txt={this.state.test} />
+				<DropdownBlock txt={this.state.test} />
 				<Footer />
 			</section>
 		);

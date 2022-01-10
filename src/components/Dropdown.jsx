@@ -1,42 +1,47 @@
 import React from 'react';
+import '../styles/components/DropdownBlock.scss';
+import '../styles/components/Dropdown.scss';
 
-export default class Dropdown extends React.Component {
-	state = { showContent: false };
+class Dropdown extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			isActive: false,
+		};
+	}
 
-	handleClick = (e) => {
-		e.preventDefault();
+	handleShow = () => {
+		this.setState({
+			isActive: true,
+		});
+		console.log('show');
+	};
 
-		this.setState({ showContent: !this.state.showContent });
+	handleHide = () => {
+		this.setState({
+			isActive: false,
+		});
+		console.log('hide');
 	};
 
 	render() {
-		const { title, content } = this.props;
-		const className = this.state.showContent ? 'show' : 'hide';
-		const antiClassName = this.state.showContent ? 'hide' : 'show';
 		return (
-			<div className="dropdown" aria-label={this.props.aria}>
-				<button
-					className="dropdown_btn"
-					onClick={this.handleClick}
-					aria-haspopup="true"
-					aria-expanded={this.state.showContent}
+			<div className="dropdown" key={this.props.key}>
+				<h2
+					className="dropdown-header"
+					style={{ cursor: 'pointer' }}
+					onClick={
+						this.state.isActive ? () => this.handleHide() : () => this.handleShow()
+					}
 				>
-					{title}
-					<i className={'fas fa-chevron-down ' + antiClassName}></i>
-					<i className={'fas fa-chevron-up ' + className}></i>
-				</button>
-				<div className={'dropdown_content ' + className}>
-					{Array.isArray(content) ? (
-						<ul>
-							{content.map((element, index) => (
-								<li key={index}>{element}</li>
-							))}
-						</ul>
-					) : (
-						<p>{content}</p>
-					)}
-				</div>
+					{this.props.title}
+				</h2>
+				{this.state.isActive ? (
+					<p className="dropdown-text">{this.props.description}</p>
+				) : null}
 			</div>
 		);
 	}
 }
+
+export default Dropdown;

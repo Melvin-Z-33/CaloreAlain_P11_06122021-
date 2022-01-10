@@ -1,11 +1,13 @@
 import React from 'react';
-import '../styles/components/BlockInfo.scss';
+import '../styles/components/DropdownBlock.scss';
+import Dropdown from './Dropdown';
 
-class BlockInfo extends React.Component {
+class DropdownBlock extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			isActive: false,
+			tot: this.props.text,
 		};
 	}
 
@@ -28,23 +30,13 @@ class BlockInfo extends React.Component {
 		return (
 			<section className="detail-block">
 				{this.props.txt.map((pres) => (
-					<div className="blockInfo" key={pres.id}>
-						<h2
-							style={{ cursor: 'pointer' }}
-							onClick={
-								this.state.isActive
-									? () => this.handleHide()
-									: () => this.handleShow()
-							}
-						>
-							{pres.title}
-						</h2>
-						{this.state.isActive ? <div>{pres.description}</div> : null}
-					</div>
+					<>
+						<Dropdown key={pres.id} title={pres.title} description={pres.description} />
+					</>
 				))}
 			</section>
 		);
 	}
 }
 
-export default BlockInfo;
+export default DropdownBlock;

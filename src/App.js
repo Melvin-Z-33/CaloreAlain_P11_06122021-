@@ -4,7 +4,6 @@ import About from './pages/About';
 import Notfound from './pages/Notfound';
 import Housings from './pages/Housings';
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
 
 function App() {
 	return (
