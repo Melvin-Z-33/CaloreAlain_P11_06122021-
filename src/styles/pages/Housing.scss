@@ -1,0 +1,87 @@
+body {
+	max-width: 1240px;
+	margin: 0 auto;
+}
+
+.housing_info {
+	display: flex;
+	justify-content: space-between;
+}
+
+.housing_title {
+	font-size: 34px;
+	color: #ff6060;
+	font-weight: 500;
+	margin: 10px 10px 10px 10px;
+}
+
+.housing_location {
+	color: #ff6060;
+	font-size: 20px;
+	font-weight: 500;
+	margin: 10px 10px 20px 10px;
+}
+
+.housing_dropdown {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+
+.housing_dropdown button {
+	height: 40px;
+	font-size: 18px;
+	width: 100%;
+}
+
+.host-rating {
+	margin-top: 20px;
+}
+
+@media screen and (max-width: 700px) {
+	.housing_info {
+		flex-direction: column;
+	}
+
+	.housing_title {
+		font-size: 26px;
+	}
+
+	.housing_location {
+		font-size: 16px;
+	}
+
+	.host-rating {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.housing_dropdown {
+		flex-direction: column;
+	}
+
+	.tag {
+		font-size: 12px;
+	}
+}
+
+.carroussel {
+	position: relative;
+}
+
+.dropdown {
+	width: 582px;
+}
+
+.dropown-header {
+	height: 52px;
+}
+
+ul {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}

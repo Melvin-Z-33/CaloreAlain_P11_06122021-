@@ -9,11 +9,15 @@
 	color: $color-white;
 	border-radius: 5px;
 	position: relative;
+	text-align: left;
 
 	.dropdown-header {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		padding: 6px 20px;
+		height: 52px;
+		max-height: 52px;
 	}
 	.dropdown-text {
 		max-width: 1023px;

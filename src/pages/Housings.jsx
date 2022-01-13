@@ -6,20 +6,21 @@ import Host from '../components/Host';
 import Rating from '../components/Rating';
 import Tags from '../components/Tags';
 import { housings } from './logements';
-
+import '../styles/pages/Housing.scss';
+import Footer from '../components/Footer';
 
 export default class Housings extends React.Component {
 	render() {
 		console.log(housings);
-		const urlSplited = window.location.pathname.split('/');
-		const id = urlSplited[2];
+		const urlSplilt = window.location.pathname.split('/');
+		const queryString_url_id = urlSplilt[2];
+		console.log(urlSplilt);
 		const index = housings.findIndex((housing) => {
-			return housing.id === id;
+			return housing.id === queryString_url_id;
 		});
 		return (
-
-			<div>
-			<Header/>
+			<>
+				<Header />
 				<Carousel pictures={housings[index].pictures} />
 
 				<div className="housing_info">
@@ -41,15 +42,16 @@ export default class Housings extends React.Component {
 					<Dropdown
 						aria="description du logement"
 						title="Description"
-						content={housings[index].description}
+						description={housings[index].description}
 					/>
 					<Dropdown
 						aria="équipements du logement"
 						title="Equipements"
-						content={housings[index].equipments}
+						description={housings[index].equipments}
 					/>
 				</div>
-			</div>
+				<Footer />
+			</>
 		);
 	}
 }

@@ -25,7 +25,6 @@ class CardWrapper extends React.Component {
 
 	render() {
 		const { housings } = this.state;
-		console.log('ici', housings);
 		return (
 			<section className="cardWrapper">
 				<ul>

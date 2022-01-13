@@ -1,0 +1,73 @@
+@import '../_utility.scss';
+
+// .carousel_img {
+// 	margin: 0 auto;
+// }
+
+.carousel {
+	max-width: 1240px;
+	border-radius: 25px;
+	height: 400px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.carousel_img {
+	object-fit: cover;
+	width: 100%;
+	height: 415px;
+	border-radius: 25px;
+}
+
+.image_number {
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+	color: white;
+}
+
+.left_btn {
+	position: absolute;
+
+	top: 50%;
+	left: 20px;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.right_btn {
+	position: absolute;
+
+	top: 50%;
+	right: 20px;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.fa-chevron-right {
+	color: white;
+	font-size: 56px;
+	font-weight: 700;
+}
+
+.fa-chevron-left {
+	color: white;
+	font-size: 56px;
+	font-weight: 700;
+}
+
+@media screen and (max-width: 700px) {
+	.carousel {
+		height: 250px;
+	}
+
+	.fa-chevron-left {
+		font-size: 26px;
+	}
+
+	.fa-chevron-right {
+		font-size: 26px;
+	}
+}

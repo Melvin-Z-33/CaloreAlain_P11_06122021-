@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/components/Rating.scss';
 
 export default class Rating extends React.Component {
 	render() {

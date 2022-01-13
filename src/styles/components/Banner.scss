@@ -13,18 +13,19 @@
 	align-items: center;
 	justify-content: center;
 	background-color: black;
-	& img {
+
+	&_title {
+		@include absolute-center-el(50%, 0, 0, 50%, -50%, -50%);
+		@extend %font48;
+		color: $color-lightgrey;
+		height: 223px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	img {
 		opacity: 0.7;
 	}
-}
-
-.banner_title {
-	@include absolute-center-el(50%, 0, 0, 50%, -50%, -50%);
-	@extend %font48;
-	color: $color-lightgrey;
-	height: 223px;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }

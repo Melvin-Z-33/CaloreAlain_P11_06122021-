@@ -1,0 +1,22 @@
+.host_info {
+	display: flex;
+	width: 150px;
+}
+
+.host_name {
+	color: #ff6060;
+	align-self: center;
+	font-weight: 500;
+	margin: 10px;
+}
+
+.host_picture {
+	border-radius: 64px;
+	width: 64px;
+}
+
+@media screen and (max-width: 700px) {
+	.host_info {
+		margin-bottom: 10px;
+	}
+}

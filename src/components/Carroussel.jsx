@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-
-export default class carroussel extends Component {
+import React from 'react';
+import '../styles/components/Carrousel.scss';
+export default class carroussel extends React.Component {
 	state = {
 		picturesArray: this.props.pictures,
 
@@ -25,7 +25,7 @@ export default class carroussel extends Component {
 
 	render() {
 		return (
-			<div className="carousel" aria-label="photos du logement">
+			<div className="carroussel" aria-label="photos du logement">
 				<button className="left_btn" aria-label="photo précédente">
 					<i className="fas fa-chevron-left" onClick={this.handleClickLeft}></i>
 				</button>
@@ -34,12 +34,13 @@ export default class carroussel extends Component {
 					src={this.state.picturesArray[this.state.currentIndex]}
 					alt="photos du logement"
 				></img>
-				<p className="image_number">
-					{this.state.currentIndex + 1}/{this.props.pictures.length}
-				</p>
+
 				<button className="right_btn" aria-label="photo suivante">
 					<i className="fas fa-chevron-right" onClick={this.handleClickRight}></i>
 				</button>
+				<p className="image_number">
+					{this.state.currentIndex + 1}/{this.props.pictures.length}
+				</p>
 			</div>
 		);
 	}

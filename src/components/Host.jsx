@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
+import '../styles/components/Host.scss';
 
-export default class Host extends Component {
+export default class Host extends React.Component {
 	render() {
 		return (
 			<div className="host_info">
