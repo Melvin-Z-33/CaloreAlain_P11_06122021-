@@ -14,15 +14,22 @@ body {
 	}
 	&__message {
 		font-size: 30px;
+		margin-bottom: 182px;
 	}
 	&__backHome {
 		color: inherit;
 		width: 284px;
-		height: 26px;
+		height: 159px;
 		font-size: 18px;
 		@extend %font18;
 		margin: 182px auto 0;
 		text-align: center;
 		text-decoration: underline;
+	}
+}
+
+@media (max-width: 445px) {
+	.error__number {
+		font-size: 96px;
 	}
 }

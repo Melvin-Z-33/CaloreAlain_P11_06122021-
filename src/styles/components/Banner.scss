@@ -27,5 +27,23 @@
 
 	img {
 		opacity: 0.7;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+@media (max-width: 445px) {
+	.banner {
+		width: 96%;
+		height: 111px;
+	}
+	.banner_title {
+		width: 169px;
+		font-size: 24px;
+		left: 127px;
+		line-height: 19px;
+		height: 48px;
+		position: absolute;
+		top: 66px;
 	}
 }
