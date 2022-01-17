@@ -1,9 +1,14 @@
+.home {
+	margin: auto;
+	max-width: 1440px;
+}
 
+@media (max-width: 630px) {
+	.banner {
+		height: 111px;
+	}
 
-
-.home{
-    margin:auto;
-    max-width:1440px;
-    
-
+	.banner img {
+		height: 111px;
+	}
 }

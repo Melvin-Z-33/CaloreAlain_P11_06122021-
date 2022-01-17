@@ -7,12 +7,6 @@
 	border-radius: $border-radius-small;
 	margin-bottom: 30px;
 	position: relative;
-	img {
-		width: 100%;
-		object-fit: fill;
-		height: -webkit-fill-available;
-		border-radius: $border-radius-small;
-	}
 
 	&__title {
 		display: block;
@@ -23,5 +17,20 @@
 		position: absolute;
 		margin-left: 20px;
 		bottom: 0px;
+	}
+}
+.card__img {
+	width: 100%;
+	object-fit: fill;
+	height: 340px;
+	border-radius: $border-radius-small;
+}
+
+@media (max-width: 630px) {
+	.card {
+		height: 255px;
+		.card__img {
+			height: 255px;
+		}
 	}
 }

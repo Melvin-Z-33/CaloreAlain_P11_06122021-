@@ -27,7 +27,7 @@ class CardWrapper extends React.Component {
 		const { housings } = this.state;
 		return (
 			<section className="cardWrapper">
-				<ul>
+				<ul className="card-container">
 					{housings.map((housing, index) => (
 						<Card
 							key={`${housing.id}-${index}`}

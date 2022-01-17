@@ -1,18 +1,24 @@
 .cardWrapper {
-	max-width: 1240px;
-	width: 1240px;
+	max-width: 1440px;
+	// width: 1240px;
 	margin: auto;
-	padding-top: 56px;
+	padding: 56px 50px 0;
 	background-color: #f6f6f6;
 
-	ul {
-		max-width: 1240px;
-		width: 1240px;
+	.card-container {
+		max-width: 1440px;
+		// width: 1240px;
 		height: auto;
 		margin: 0px auto 43px;
 		display: grid;
 		grid-template-columns: repeat(auto-fill, 340px);
 		justify-content: center;
 		grid-gap: 60px;
+	}
+}
+
+@media (max-width: 630px) {
+	.cardWrapper {
+		background-color: #fff;
 	}
 }

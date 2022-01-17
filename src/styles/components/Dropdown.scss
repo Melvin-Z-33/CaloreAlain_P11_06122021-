@@ -5,7 +5,7 @@
 
 	height: auto;
 	margin: 0 auto 30px;
-	background-color: $color-primary;
+	background-color: $color-lightgrey;
 	color: $color-white;
 	border-radius: 5px;
 	position: relative;
@@ -18,15 +18,19 @@
 		padding: 6px 20px;
 		height: 52px;
 		max-height: 52px;
+		border-radius: 5px;
+		background-color: $color-primary;
 	}
 	.dropdown-text {
 		max-width: 1023px;
-		height: 146px;
+
+		height: auto;
 		left: 0px;
 		top: 38px;
-		border-radius: 5px;
+
 		background-color: $color-lightgrey;
 		color: $color-primary;
 		margin-bottom: 30px;
+		padding: 12px 27px 10px 18px;
 	}
 }

@@ -6,18 +6,14 @@ import Footer from '../components/Footer';
 
 import '../styles/pages/Home.scss';
 
-
 class Home extends React.Component {
 	render() {
 		return (
 			<div className="home">
 				<Header />
-				<Banner />
+				<Banner image={'pop'} />
 				<CardWrapper />
-				<Footer/>
-				{/* <Banner background={img} title="Chez vous, partout et ailleurs"/> */}
-				{/* <ListLogements /> */}
-				{/* <Footer /> */}
+				<Footer />
 			</div>
 		);
 	}

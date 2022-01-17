@@ -1,6 +1,7 @@
 import React from 'react';
 import Carousel from '../components/Carroussel';
 import Dropdown from '../components/Dropdown';
+import DropdownBlock from '../components/DropdownBlock';
 import Header from '../components/Header';
 import Host from '../components/Host';
 import Rating from '../components/Rating';
@@ -18,6 +19,18 @@ export default class Housings extends React.Component {
 		const index = housings.findIndex((housing) => {
 			return housing.id === queryString_url_id;
 		});
+		let Content = "<div aria-label='étoiles'>";
+		let Star = 'blank';
+
+		const test = () => {
+			for (let i = 1; i <= 5; i++) {
+				if (i <= housings[index].rating) Star = 'full';
+				Content += "<i className='fas fa-star " + Star + "'></i>";
+			}
+			Content += '</div>';
+			console.log('etoile' + ' ' + housings[index].rating);
+		};
+
 		return (
 			<>
 				<Header />
@@ -39,16 +52,20 @@ export default class Housings extends React.Component {
 					</div>
 				</div>
 				<div className="housing_dropdown">
-					<Dropdown
-						aria="description du logement"
-						title="Description"
-						description={housings[index].description}
-					/>
-					<Dropdown
-						aria="équipements du logement"
-						title="Equipements"
-						description={housings[index].equipments}
-					/>
+					<div className="housing__dropdown-block">
+						<Dropdown
+							aria="description du logement"
+							title="Description"
+							description={housings[index].description}
+						/>
+					</div>
+					<div className="housing__dropdown-block">
+						<Dropdown
+							aria="équipements du logement"
+							title="Equipements"
+							description={housings[index].equipments}
+						/>
+					</div>
 				</div>
 				<Footer />
 			</>
