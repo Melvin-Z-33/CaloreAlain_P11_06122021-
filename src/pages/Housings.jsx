@@ -31,6 +31,34 @@ export default class Housings extends React.Component {
 			console.log('etoile' + ' ' + housings[index].rating);
 		};
 
+		<div aria-label="1 étoile sur 5">
+			<i className="fas fa-star full"></i>
+			<i className="fas fa-star blank"></i>
+			<i className="fas fa-star blank"></i>
+			<i className="fas fa-star blank"></i>
+			<i className="fas fa-star blank"></i>
+		</div>;
+
+		let rating;
+
+		const putStar = (nbrOfStars) => {
+			const starMaximum = 5;
+			let starGrey = starMaximum - nbrOfStars;
+			const starFull = '<i className="fas fa-star full"></i> ';
+			const starBlank = '<i className="fas fa-star blank"></i> ';
+			rating = `"<div  className="rating" aria-label=\" ${nbrOfStars} étoile sur 5\">"`;
+
+			for (let i = 1; i < starMaximum; i++) {
+				rating += starFull;
+			}
+			for (let j = 0; j < starGrey; j++) {
+				rating += starBlank;
+			}
+
+			rating += '<div/>';
+			return rating;
+		};
+
 		return (
 			<>
 				<Header />
@@ -49,6 +77,7 @@ export default class Housings extends React.Component {
 					<div className="host-rating">
 						<Host host={housings[index].host} />
 						<Rating rate={housings[index].rating} />
+						{/* {putStar(housings[index].rating)} */}
 					</div>
 				</div>
 				<div className="housing_dropdown">
