@@ -2,10 +2,10 @@
 
 .dropdown {
 	max-width: 1023px;
-
+	width: 100%;
 	height: auto;
 	margin: 0 auto 30px;
-	background-color: $color-lightgrey;
+	// background-color: $color-lightgrey;
 	color: $color-white;
 	border-radius: 5px;
 	position: relative;
@@ -23,14 +23,28 @@
 	}
 	.dropdown-text {
 		max-width: 1023px;
-
+		min-height: 141px;
 		height: auto;
 		left: 0px;
 		top: 38px;
-
 		background-color: $color-lightgrey;
 		color: $color-primary;
 		margin-bottom: 30px;
 		padding: 12px 27px 10px 18px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.dropdown-header {
+		height: 33px;
+	}
+
+	.dropdown-title {
+		height: auto;
+		font-size: 14px;
+	}
+
+	.arrow {
+		height: 12px;
 	}
 }

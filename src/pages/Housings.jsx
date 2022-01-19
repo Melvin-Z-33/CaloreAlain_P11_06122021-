@@ -1,7 +1,6 @@
 import React from 'react';
 import Carousel from '../components/Carroussel';
 import Dropdown from '../components/Dropdown';
-import DropdownBlock from '../components/DropdownBlock';
 import Header from '../components/Header';
 import Host from '../components/Host';
 import Rating from '../components/Rating';
@@ -19,45 +18,45 @@ export default class Housings extends React.Component {
 		const index = housings.findIndex((housing) => {
 			return housing.id === queryString_url_id;
 		});
-		let Content = "<div aria-label='étoiles'>";
-		let Star = 'blank';
+		// let Content = "<div aria-label='étoiles'>";
+		// let Star = 'blank';
 
-		const test = () => {
-			for (let i = 1; i <= 5; i++) {
-				if (i <= housings[index].rating) Star = 'full';
-				Content += "<i className='fas fa-star " + Star + "'></i>";
-			}
-			Content += '</div>';
-			console.log('etoile' + ' ' + housings[index].rating);
-		};
+		// const test = () => {
+		// 	for (let i = 1; i <= 5; i++) {
+		// 		if (i <= housings[index].rating) Star = 'full';
+		// 		Content += "<i className='fas fa-star " + Star + "'></i>";
+		// 	}
+		// 	Content += '</div>';
+		// 	console.log('etoile' + ' ' + housings[index].rating);
+		// };
 
-		<div aria-label="1 étoile sur 5">
-			<i className="fas fa-star full"></i>
-			<i className="fas fa-star blank"></i>
-			<i className="fas fa-star blank"></i>
-			<i className="fas fa-star blank"></i>
-			<i className="fas fa-star blank"></i>
-		</div>;
+		// <div aria-label="1 étoile sur 5">
+		// 	<i className="fas fa-star full"></i>
+		// 	<i className="fas fa-star blank"></i>
+		// 	<i className="fas fa-star blank"></i>
+		// 	<i className="fas fa-star blank"></i>
+		// 	<i className="fas fa-star blank"></i>
+		// </div>;
 
-		let rating;
+		// let rating;
 
-		const putStar = (nbrOfStars) => {
-			const starMaximum = 5;
-			let starGrey = starMaximum - nbrOfStars;
-			const starFull = '<i className="fas fa-star full"></i> ';
-			const starBlank = '<i className="fas fa-star blank"></i> ';
-			rating = `"<div  className="rating" aria-label=\" ${nbrOfStars} étoile sur 5\">"`;
+		// const putStar = (nbrOfStars) => {
+		// 	const starMaximum = 5;
+		// 	let starGrey = starMaximum - nbrOfStars;
+		// 	const starFull = '<i className="fas fa-star full"></i> ';
+		// 	const starBlank = '<i className="fas fa-star blank"></i> ';
+		// 	rating = `"<div  className="rating" aria-label=\" ${nbrOfStars} étoile sur 5\">"`;
 
-			for (let i = 1; i < starMaximum; i++) {
-				rating += starFull;
-			}
-			for (let j = 0; j < starGrey; j++) {
-				rating += starBlank;
-			}
+		// 	for (let i = 1; i < starMaximum; i++) {
+		// 		rating += starFull;
+		// 	}
+		// 	for (let j = 0; j < starGrey; j++) {
+		// 		rating += starBlank;
+		// 	}
 
-			rating += '<div/>';
-			return rating;
-		};
+		// 	rating += '<div/>';
+		// 	return rating;
+		// };
 
 		return (
 			<>
@@ -77,7 +76,6 @@ export default class Housings extends React.Component {
 					<div className="host-rating">
 						<Host host={housings[index].host} />
 						<Rating rate={housings[index].rating} />
-						{/* {putStar(housings[index].rating)} */}
 					</div>
 				</div>
 				<div className="housing_dropdown">

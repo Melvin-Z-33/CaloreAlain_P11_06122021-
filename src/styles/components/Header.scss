@@ -121,7 +121,7 @@ nav-items {
 
 	.header_logo {
 		width: 145px;
-		height: 47px;
+		height: 35px;
 
 		img {
 			height: 34px;
@@ -129,13 +129,14 @@ nav-items {
 	}
 	nav {
 		width: 140px;
-		height: 47px;
+		height: 23px;
 		align-items: center;
 		justify-content: space-between;
 	}
 
 	.nav__link {
 		font-size: 15px;
-		line-height: 47px;
+		line-height: 34px;
+		height: 34px;
 	}
 }

@@ -1,9 +1,5 @@
 @import '../_utility.scss';
 
-// .carousel_img {
-// 	margin: 0 auto;
-// }
-
 .carousel {
 	max-width: 1240px;
 	border-radius: 25px;
@@ -69,5 +65,11 @@
 
 	.fa-chevron-right {
 		font-size: 26px;
+	}
+}
+
+@media screen and (max-width: 445px) {
+	.carousel_img {
+		height: 266px;
 	}
 }

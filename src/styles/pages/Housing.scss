@@ -22,10 +22,15 @@
 }
 
 .housing_dropdown {
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	margin: 0 auto 30px;
 	padding-top: 30px;
+}
+
+.housing__dropdown-block {
+	width: 48%;
 }
 
 .housing_dropdown button {
@@ -39,8 +44,6 @@
 }
 
 .dropdown {
-	width: 582px;
-	// margin: 0;
 	ul {
 		margin: 0px;
 		border-radius: 10px;
@@ -50,14 +53,8 @@
 	}
 
 	.dropdown-text {
-		// height: 185px;
+		min-height: 180px;
 		top: 0;
-	}
-}
-
-@media screen and (max-width: 1370px) {
-	.dropdown {
-		width: 480px;
 	}
 }
 
@@ -69,6 +66,7 @@
 
 	.housing__dropdown-block {
 		margin-top: 23px;
+		width: 100%;
 	}
 
 	.dropdown-text {
@@ -86,9 +84,9 @@
 		padding: 0px;
 	}
 
-	header {
-		padding: 20px;
-	}
+	// header {
+	// 	padding: 20px;
+	// }
 
 	.carroussel {
 		padding: 20px;
@@ -137,9 +135,9 @@
 		padding: 0 10px;
 	}
 
-	.dropdown .dropdown-text {
-		top: 20px;
-	}
+	// .dropdown .dropdown-text {
+	// 	top: 20px;
+	// }
 }
 
 .carroussel {

@@ -15,10 +15,10 @@ export default class Ratings extends React.Component {
 		const starGrey = starMaximum - this.state.etoile.rate;
 
 		for (let i = 0; i < this.state.etoile.rate; i++) {
-			arrayOfStar.push(<i key={'star-full' + '-' + i} className="fas fa-star full"></i>);
+			arrayOfStar.push(<i key={'star-full-' + i} className="fas fa-star full"></i>);
 		}
 		for (let j = 0; j < starGrey; j++) {
-			arrayOfStar.push(<i key={'star-blank' + '-' + j} className="fas fa-star blank"></i>);
+			arrayOfStar.push(<i key={'star-blank-' + j} className="fas fa-star blank"></i>);
 		}
 
 		return <div>{arrayOfStar}</div>;
