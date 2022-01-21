@@ -14,18 +14,21 @@ export default class Housings extends React.Component {
 		super(props);
 
 		this.state = {
+			loading: false,
 			housings: [],
 			index: '',
 			obj: {},
 		};
 	}
 	componentDidMount() {
+		this.setState({ loading: true });
 		fetch('/logements.json')
 			.then((response) => response.json())
 			.then((data) => {
-				this.setState({ housings: data });
-				console.count();
-				// ******************
+				this.setState({
+					loading: false,
+					housings: data,
+				});
 				const { housings } = this.state;
 				console.log(housings);
 				const urlSplilt = window.location.pathname.split('/');
@@ -45,6 +48,39 @@ export default class Housings extends React.Component {
 	render() {
 		const { housings, index, obj } = this.state;
 		const urlSplilt = window.location.pathname.split('/')[2];
+
+		const DropdownComponentsDescription = (housing) => {
+			return (
+				<>
+					<Dropdown
+						aria="équipements du logement"
+						title="Description"
+						description={housing.description}
+						key={`dropdown2-${housing.id}`}
+					/>
+					,
+				</>
+			);
+		};
+
+		const DropdownComponentsEquipment = (housing) => {
+			return (
+				<>
+					<Dropdown
+						aria="équipements du logement"
+						title="Equipements"
+						description={housing.equipments}
+						key={`dropdown2-${housing.id}`}
+					/>
+					,
+				</>
+			);
+		};
+
+		// const DropwdownDescription = this.state.loading
+		// 	? 'loading...'
+		// 	: DropdownComponentsDescription;
+
 		return (
 			<>
 				<Header />
@@ -76,20 +112,10 @@ export default class Housings extends React.Component {
 							</div>
 							<div className="housing_dropdown ">
 								<div className="housing__dropdown-block">
-									<Dropdown
-										aria="description du logement"
-										title="Description"
-										description={housing.description}
-										key={`dropdown1-${housing.id}`}
-									/>
+									{DropdownComponentsDescription(housing)}
 								</div>
 								<div className="housing__dropdown-block">
-									<Dropdown
-										aria="équipements du logement"
-										title="Equipements"
-										description={housing.equipments}
-										key={`dropdown2-${housing.id}`}
-									/>
+									{DropdownComponentsEquipment(housing)}
 								</div>
 							</div>
 						</div>

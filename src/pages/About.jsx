@@ -1,5 +1,4 @@
 import React from 'react';
-import DropdownBlock from '../components/DropdownBlock';
 import Dropdown from '../components/Dropdown';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -7,25 +6,24 @@ import imgBackground from '../assets/about/gustavo-alves-YOXSC4zRcxw-unsplash 1.
 import imgBackgroundMobile from '../assets/about/banner__mobile.png';
 import '../styles/pages/About.scss';
 
-//import { withRouter } from 'react-router-dom';
-// import '../../style/components/Banner.scss';
-// import { about } from '../../kasa_about';
-// import mountains from '../../assets/moutains.png';
-// import '../../style/layout/about.scss';
-
 class About extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			loading: false,
 			test: [],
 		};
 	}
 
 	componentDidMount() {
+		this.setState({ loading: true });
 		fetch('./detailTexte.json')
 			.then((response) => response.json())
 			.then((data) => {
-				this.setState({ test: data });
+				this.setState({
+					loading: false,
+					test: data,
+				});
 			})
 			.catch((error) => {
 				console.log(`Fetch error: ${error}`);
@@ -33,7 +31,15 @@ class About extends React.Component {
 	}
 
 	render() {
-		console.log(this.state.test);
+		const jokeComponents = this.state.test.map((pres, index) => (
+			<Dropdown
+				key={`${pres.title}-${index++}`}
+				title={pres.title}
+				description={pres.description}
+			/>
+		));
+
+		const text = this.state.loading ? 'loading...' : jokeComponents;
 		return (
 			<section className="about">
 				<Header />
@@ -44,22 +50,12 @@ class About extends React.Component {
 						alt="banner_img_moutains"
 					/>
 				</div>
-				{/* {DropdownBlock ? <DropdownBlock txt={this.state.test} /> : null} */}
-				{/* <DropdownBlock txt={this.state.test} /> */}
-				{this.state.test.map((pres, index) => (
-					<>
-						<Dropdown
-							key={`${pres.title}-${index++}`}
-							title={pres.title}
-							description={pres.description}
-						/>
-					</>
-				))}
+
+				{text}
 				<Footer />
 			</section>
 		);
 	}
-
-	// <>{this.state.test.length > 0 ? <DropdownBlock txt={this.state.test} /> : null} </>
 }
+
 export default About;
