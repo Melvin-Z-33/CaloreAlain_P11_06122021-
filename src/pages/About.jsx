@@ -1,5 +1,6 @@
 import React from 'react';
 import DropdownBlock from '../components/DropdownBlock';
+import Dropdown from '../components/Dropdown';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import imgBackground from '../assets/about/gustavo-alves-YOXSC4zRcxw-unsplash 1.png';
@@ -33,8 +34,6 @@ class About extends React.Component {
 
 	render() {
 		console.log(this.state.test);
-		const mediaQuery = window.matchMedia('(min-width: 768px)');
-
 		return (
 			<section className="about">
 				<Header />
@@ -45,11 +44,22 @@ class About extends React.Component {
 						alt="banner_img_moutains"
 					/>
 				</div>
-				<DropdownBlock txt={this.state.test} />
+				{/* {DropdownBlock ? <DropdownBlock txt={this.state.test} /> : null} */}
+				{/* <DropdownBlock txt={this.state.test} /> */}
+				{this.state.test.map((pres, index) => (
+					<>
+						<Dropdown
+							key={`${pres.title}-${index++}`}
+							title={pres.title}
+							description={pres.description}
+						/>
+					</>
+				))}
 				<Footer />
 			</section>
 		);
 	}
-}
 
+	// <>{this.state.test.length > 0 ? <DropdownBlock txt={this.state.test} /> : null} </>
+}
 export default About;

@@ -34,13 +34,13 @@ export default class carroussel extends React.Component {
 					src={this.state.picturesArray[this.state.currentIndex]}
 					alt="photos du logement"
 				></img>
-
 				<button className="right_btn" aria-label="photo suivante">
 					<i className="fas fa-chevron-right" onClick={this.handleClickRight}></i>
 				</button>
 				<p className="image_number">
 					{this.state.currentIndex + 1}/{this.props.pictures.length}
 				</p>
+				{/* h */}
 			</div>
 		);
 	}

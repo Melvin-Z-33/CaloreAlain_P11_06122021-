@@ -12,18 +12,21 @@ class DropdownBlock extends React.Component {
 
 	render() {
 		//const { test } = this.state;
-		console.log('aa');
+		console.log(this.state.tot);
+		let a = 2;
 		return (
 			<section className="block-info" key="123">
-				{this.props.txt.map((pres) => (
-					<>
-						<Dropdown
-							key={pres.id.toString()}
-							title={pres.title}
-							description={pres.description}
-						/>
-					</>
-				))}
+				{this.props.txt.map((pres, index) =>
+					console.log(Dropdown.key)(
+						<>
+							<Dropdown
+								key={`pres.id.toString()-${index++}`}
+								title={pres.title}
+								description={pres.description}
+							/>
+						</>,
+					),
+				)}
 			</section>
 		);
 	}
