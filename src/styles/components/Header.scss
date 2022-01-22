@@ -33,7 +33,7 @@ nav {
 
 ul {
 	list-style: none;
-	color: #ff6060;
+	color: $color-primary;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -46,7 +46,6 @@ nav-items {
 }
 
 .nav__link {
-	//color: #ff6060;
 	color: $color-primary;
 	text-decoration: none;
 	font-size: 24px;
@@ -60,9 +59,9 @@ nav-items {
 }
 
 .nav__link-actived {
-	color: #ff6060;
+	color: $color-primary;
 	text-decoration: none;
-	border-bottom: 2px solid #ff6060;
+	border-bottom: 2px solid $color-primary;
 	font-size: 24px;
 	text-align: center;
 	font-weight: 700;

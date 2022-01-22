@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/components/Rating.scss';
 
-export default class Ratings extends React.Component {
+class Ratings extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -24,3 +24,5 @@ export default class Ratings extends React.Component {
 		return <div>{arrayOfStar}</div>;
 	}
 }
+
+export default Ratings;

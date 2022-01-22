@@ -1,10 +1,12 @@
+@import '../_utility.scss';
+
 .host_info {
 	display: flex;
 	width: 150px;
 }
 
 .host_name {
-	color: #ff6060;
+	color: $color-primary;
 	align-self: center;
 	font-weight: 500;
 	margin: 10px;

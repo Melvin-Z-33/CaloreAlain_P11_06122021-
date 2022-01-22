@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/components/Tags.scss';
-export default class Tags extends Component {
+class Tags extends Component {
 	render() {
 		return (
 			<div className="tags">
@@ -15,3 +15,5 @@ export default class Tags extends Component {
 		);
 	}
 }
+
+export default Tags;

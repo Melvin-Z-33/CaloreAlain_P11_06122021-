@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/components/DropdownBlock.scss';
 import '../styles/components/Dropdown.scss';
 import arrowDown from '../assets/arrow/arrow-down.png';
 import arrowUp from '../assets/arrow/arrow-up.png';

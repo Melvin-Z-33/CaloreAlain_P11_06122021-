@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/components/Host.scss';
 
-export default class Host extends React.Component {
+class Host extends React.Component {
 	render() {
 		return (
 			<div className="host_info">
@@ -9,9 +9,11 @@ export default class Host extends React.Component {
 				<img
 					className="host_picture"
 					src={this.props.host.picture}
-					alt="propriétaire"
+					alt="propriétaire du logement"
 				></img>
 			</div>
 		);
 	}
 }
+
+export default Host;

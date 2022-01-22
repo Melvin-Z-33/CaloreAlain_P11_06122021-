@@ -1,7 +1,6 @@
 @import '../_utility.scss';
 
 .banner {
-	// margin-left: 50px;
 	width: 100%;
 	max-width: 1240px;
 	height: 223px;
@@ -46,7 +45,6 @@
 @media (max-width: 445px) {
 	.banner {
 		width: 96%;
-		// height: 111px;
 	}
 	.banner_title {
 		width: 169px;

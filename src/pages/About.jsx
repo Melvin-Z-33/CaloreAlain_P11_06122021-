@@ -1,9 +1,9 @@
 import React from 'react';
-import Dropdown from '../components/Dropdown';
-import Footer from '../components/Footer';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Dropdown from '../components/Dropdown';
 import imgBackground from '../assets/about/gustavo-alves-YOXSC4zRcxw-unsplash 1.png';
-import imgBackgroundMobile from '../assets/about/banner__mobile.png';
+// import imgBackgroundMobile from '../assets/about/banner__mobile.png';
 import '../styles/pages/About.scss';
 
 class About extends React.Component {
@@ -31,7 +31,7 @@ class About extends React.Component {
 	}
 
 	render() {
-		const jokeComponents = this.state.test.map((pres, index) => (
+		const dropdownComponents = this.state.test.map((pres, index) => (
 			<Dropdown
 				key={`${pres.title}-${index++}`}
 				title={pres.title}
@@ -39,7 +39,8 @@ class About extends React.Component {
 			/>
 		));
 
-		const text = this.state.loading ? 'loading...' : jokeComponents;
+		const dropdown = this.state.loading ? 'loading...' : dropdownComponents;
+
 		return (
 			<section className="about">
 				<Header />
@@ -50,8 +51,7 @@ class About extends React.Component {
 						alt="banner_img_moutains"
 					/>
 				</div>
-
-				{text}
+				{dropdown}
 				<Footer />
 			</section>
 		);

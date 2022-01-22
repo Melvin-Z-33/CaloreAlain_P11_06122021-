@@ -1,10 +1,12 @@
+@import '../_utility.scss';
+
 .rating_box {
 	margin-left: 10px;
 	margin-top: 10px;
 }
 
 .full {
-	color: #ff6060;
+	color: $color-primary;
 	font-size: 26px;
 }
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import Card from './Card';
 import '../styles/components/CardWrapper.scss';
-
 import '../styles/components/Banner.scss';
 
 class CardWrapper extends React.Component {

@@ -7,14 +7,14 @@
 
 .housing_title {
 	font-size: 34px;
-	color: #ff6060;
+	color: $color-primary;
 	font-weight: 500;
 	margin: 10px 10px 10px 10px;
 	text-align: left;
 }
 
 .housing_location {
-	color: #ff6060;
+	color: $color-primary;
 	font-size: 20px;
 	font-weight: 500;
 	margin: 10px 10px 20px 10px;
@@ -84,10 +84,6 @@
 		padding: 0px;
 	}
 
-	// header {
-	// 	padding: 20px;
-	// }
-
 	.carroussel {
 		padding: 20px;
 	}
@@ -134,19 +130,11 @@
 	.host-rating {
 		padding: 0 10px;
 	}
-
-	// .dropdown .dropdown-text {
-	// 	top: 20px;
-	// }
 }
 
 .carroussel {
 	position: relative;
 }
-
-// .dropdown {
-// 	width: 582px;
-// }
 
 .dropown-header {
 	height: 52px;

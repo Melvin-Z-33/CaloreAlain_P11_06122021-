@@ -3,7 +3,6 @@ import Header from '../components/Header';
 import Banner from '../components/Banner';
 import CardWrapper from '../components/CardWrapper';
 import Footer from '../components/Footer';
-
 import '../styles/pages/Home.scss';
 
 class Home extends React.Component {
@@ -11,7 +10,7 @@ class Home extends React.Component {
 		return (
 			<div className="home">
 				<Header />
-				<Banner image={'pop'} />
+				<Banner />
 				<CardWrapper />
 				<Footer />
 			</div>
