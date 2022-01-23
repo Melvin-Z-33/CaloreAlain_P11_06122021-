@@ -23,6 +23,12 @@
 	}
 }
 
+@media (max-width: 700px) {
+	.banner__about {
+		width: 96%;
+	}
+}
+
 @media (max-width: 630px) {
 	.block-info {
 		margin: 0 auto;
