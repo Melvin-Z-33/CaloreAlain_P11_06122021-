@@ -1,6 +1,6 @@
 import React from 'react';
-import '../styles/components/Slider.scss';
-class Slider extends React.Component {
+import '../styles/components/Gallery.scss';
+class Gallery extends React.Component {
 	state = {
 		picturesArray: this.props.pictures,
 
@@ -25,12 +25,12 @@ class Slider extends React.Component {
 
 	render() {
 		return (
-			<div className="slider" aria-label="photos du logement">
+			<div className="gallery" aria-label="photos du logement">
 				<button className="left_btn" aria-label="photo précédente">
 					<i className="fas fa-chevron-left" onClick={this.handleClickLeft}></i>
 				</button>
 				<img
-					className="slider_img"
+					className="gallery_img"
 					src={this.state.picturesArray[this.state.currentIndex]}
 					alt="photos du logement"
 				></img>
@@ -45,4 +45,4 @@ class Slider extends React.Component {
 	}
 }
 
-export default Slider;
+export default Gallery;

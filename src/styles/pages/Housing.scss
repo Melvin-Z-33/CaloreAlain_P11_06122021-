@@ -21,7 +21,7 @@
 	text-align: left;
 }
 
-.housing_dropdown {
+.housing_collapse {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -29,11 +29,11 @@
 	padding-top: 30px;
 }
 
-.housing__dropdown-block {
+.housing__collapse-block {
 	width: 48%;
 }
 
-.housing_dropdown button {
+.housing_collapse button {
 	height: 40px;
 	font-size: 18px;
 	width: 100%;
@@ -43,7 +43,7 @@
 	margin-top: 20px;
 }
 
-.dropdown {
+.collapse {
 	ul {
 		margin: 0px;
 		border-radius: 10px;
@@ -52,24 +52,24 @@
 		}
 	}
 
-	.dropdown-text {
+	.collapse-text {
 		min-height: 180px;
 		top: 0;
 	}
 }
 
 @media screen and (max-width: 1162px) {
-	.housing_dropdown {
+	.housing_collapse {
 		flex-direction: column;
 		align-items: center;
 	}
 
-	.housing__dropdown-block {
+	.housing__collapse-block {
 		margin-top: 23px;
 		width: 100%;
 	}
 
-	.dropdown-text {
+	.collapse-text {
 		margin-bottom: 0px;
 	}
 
@@ -84,9 +84,9 @@
 		padding: 0px;
 	}
 
-	.carroussel {
-		padding: 20px;
-	}
+	// .carroussel {
+	// 	padding: 20px;
+	// }
 	.housing_info {
 		flex-direction: column;
 	}
@@ -109,14 +109,14 @@
 		align-items: center;
 	}
 
-	.housing_dropdown {
+	.housing_collapse {
 		flex-direction: column;
 	}
 
-	.housing__dropdown-block {
+	.housing__collapse-block {
 		width: 100%;
 	}
-	.dropdown {
+	.collapse {
 		width: 100%;
 		padding: 0 20px;
 	}
@@ -132,9 +132,9 @@
 	}
 }
 
-.carroussel {
-	position: relative;
-}
+// .carroussel {
+// 	position: relative;
+// }
 
 .dropown-header {
 	height: 52px;

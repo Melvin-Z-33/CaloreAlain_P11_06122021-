@@ -1,6 +1,6 @@
 @import '../_utility.scss';
 
-.dropdown {
+.collapse {
 	max-width: 1023px;
 	width: 100%;
 	height: auto;
@@ -11,7 +11,7 @@
 	position: relative;
 	text-align: left;
 
-	.dropdown-header {
+	.collapse-header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -21,7 +21,7 @@
 		border-radius: 5px;
 		background-color: $color-primary;
 	}
-	.dropdown-text {
+	.collapse-text {
 		max-width: 1023px;
 		min-height: 141px;
 		height: auto;
@@ -35,11 +35,11 @@
 }
 
 @media screen and (max-width: 400px) {
-	.dropdown-header {
+	.collapse-header {
 		height: 33px;
 	}
 
-	.dropdown-title {
+	.collapse-title {
 		height: auto;
 		font-size: 14px;
 	}

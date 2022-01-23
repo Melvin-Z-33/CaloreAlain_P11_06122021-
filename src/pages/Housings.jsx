@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
-import Slider from '../components/Slider';
-import Dropdown from '../components/Dropdown';
+import Gallery from '../components/Gallery';
+import Collapse from '../components/Collapse';
 import Host from '../components/Host';
 import Rating from '../components/Rating';
 import Tags from '../components/Tags';
@@ -43,9 +43,9 @@ class Housings extends React.Component {
 				{housings.map((housing, index) =>
 					housing.id === queryIdInUrl ? (
 						<div key="accomadation-content">
-							<Slider
+							<Gallery
 								pictures={housing.pictures}
-								key={`slider-${housing.id}-${index}`}
+								key={`gallery-${housing.id}-${index}`}
 							/>
 							<div className="housing_info">
 								<div className="title-location-tags">
@@ -65,21 +65,21 @@ class Housings extends React.Component {
 									<Rating rate={housing.rating} key={`key-${housing.id}`} />
 								</div>
 							</div>
-							<div className="housing_dropdown ">
-								<div className="housing__dropdown-block">
-									<Dropdown
+							<div className="housing_collapse ">
+								<div className="housing__collapse-block">
+									<Collapse
 										aria="équipements du logement"
 										title="Description"
 										description={housing.description}
-										key={`dropdown1-${housing.id}`}
+										key={`collapse1-${housing.id}`}
 									/>
 								</div>
-								<div className="housing__dropdown-block">
-									<Dropdown
+								<div className="housing__collapse-block">
+									<Collapse
 										aria="équipements du logement"
 										title="Equipements"
 										description={housing.equipments}
-										key={`dropdown2-${housing.id}`}
+										key={`collapse2-${housing.id}`}
 									/>
 								</div>
 							</div>

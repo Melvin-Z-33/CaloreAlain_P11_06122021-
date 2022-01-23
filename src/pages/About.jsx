@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Dropdown from '../components/Dropdown';
+import Collapse from '../components/Collapse';
 import imgBackground from '../assets/about/gustavo-alves-YOXSC4zRcxw-unsplash 1.png';
 // import imgBackgroundMobile from '../assets/about/banner__mobile.png';
 import '../styles/pages/About.scss';
@@ -31,15 +31,15 @@ class About extends React.Component {
 	}
 
 	render() {
-		const dropdownComponents = this.state.test.map((pres, index) => (
-			<Dropdown
+		const collapseComponents = this.state.test.map((pres, index) => (
+			<Collapse
 				key={`${pres.title}-${index++}`}
 				title={pres.title}
 				description={pres.description}
 			/>
 		));
 
-		const dropdown = this.state.loading ? 'loading...' : dropdownComponents;
+		const collapse = this.state.loading ? 'loading...' : collapseComponents;
 
 		return (
 			<section className="about">
@@ -51,7 +51,7 @@ class About extends React.Component {
 						alt="banner_img_moutains"
 					/>
 				</div>
-				{dropdown}
+				{collapse}
 				<Footer />
 			</section>
 		);

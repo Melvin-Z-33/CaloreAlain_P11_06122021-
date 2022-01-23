@@ -1,6 +1,6 @@
 @import '../_utility.scss';
 
-.slider {
+.gallery {
 	max-width: 1240px;
 	border-radius: 25px;
 	height: 400px;
@@ -8,7 +8,7 @@
 	margin: 0 auto;
 }
 
-.slider_img {
+.gallery_img {
 	object-fit: cover;
 	width: 100%;
 	height: 415px;
@@ -54,7 +54,7 @@
 }
 
 @media screen and (max-width: 700px) {
-	.slider {
+	.gallery {
 		height: 250px;
 	}
 
@@ -68,7 +68,7 @@
 }
 
 @media screen and (max-width: 445px) {
-	.slider_img {
+	.gallery_img {
 		height: 266px;
 	}
 }
