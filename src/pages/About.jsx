@@ -11,7 +11,7 @@ class About extends React.Component {
 		super(props);
 		this.state = {
 			loading: false,
-			test: [],
+			data: [],
 		};
 	}
 
@@ -22,7 +22,7 @@ class About extends React.Component {
 			.then((data) => {
 				this.setState({
 					loading: false,
-					test: data,
+					data: data,
 				});
 			})
 			.catch((error) => {
@@ -31,7 +31,7 @@ class About extends React.Component {
 	}
 
 	render() {
-		const collapseComponents = this.state.test.map((pres, index) => (
+		const collapseComponents = this.state.data.map((pres, index) => (
 			<Collapse
 				key={`${pres.title}-${index++}`}
 				title={pres.title}

@@ -10,6 +10,7 @@ class Gallery extends React.Component {
 	handleClickRight = () => {
 		if (this.state.currentIndex === this.state.picturesArray.length - 1) {
 			this.setState({ currentIndex: 0 });
+			console.log(this.state.picturesArray.length);
 		} else {
 			this.setState({ currentIndex: this.state.currentIndex + 1 });
 		}

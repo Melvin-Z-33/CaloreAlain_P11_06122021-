@@ -49,4 +49,9 @@
 		width: 93%;
 		padding: 0;
 	}
+
+	.banner__about .banner__about-img {
+		object-fit: none;
+		object-position: right;
+	}
 }
