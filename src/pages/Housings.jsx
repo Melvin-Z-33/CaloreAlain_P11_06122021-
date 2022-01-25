@@ -15,6 +15,7 @@ class Housings extends React.Component {
 		this.state = {
 			loading: false,
 			housings: [],
+			presentHousing: true,
 		};
 	}
 
@@ -27,6 +28,16 @@ class Housings extends React.Component {
 					loading: false,
 					housings: data,
 				});
+
+				const queryIdInUrl = window.location.pathname.split('/')[2];
+				const { housings } = this.state;
+				let arrayOfId = [];
+
+				housings.forEach((item) => arrayOfId.push(item.id));
+
+				arrayOfId.includes(queryIdInUrl)
+					? this.setState({ presentHousing: true })
+					: this.setState({ presentHousing: false });
 			})
 			.catch((error) => {
 				console.log(`Fetch error: ${error}`);
@@ -34,61 +45,68 @@ class Housings extends React.Component {
 	}
 
 	render() {
-		const { housings } = this.state;
 		const queryIdInUrl = window.location.pathname.split('/')[2];
+		const { housings } = this.state;
 
-		return (
-			<>
-				<Header />
-				{housings.map((housing, index) =>
-					housing.id === queryIdInUrl ? (
-						<div key="accomadation-content">
-							<Gallery
-								pictures={housing.pictures}
-								key={`gallery-${housing.id}-${index}`}
-							/>
-							<div className="housing_info">
-								<div className="title-location-tags">
-									<p className="housing_title" aria-label="titre du logement">
-										{housing.title}
-									</p>
-									<p
-										className="housing_location"
-										aria-label="localisation du logement"
-									>
-										{housing.location}
-									</p>
-									<Tags tags={housing.tags} key={`tags-${housing.id}`} />
+		if (this.state.presentHousing) {
+			return (
+				<>
+					<Header />
+
+					{housings.map((housing, index) =>
+						housing.id === queryIdInUrl ? (
+							<div key="accomadation-content">
+								<Gallery
+									pictures={housing.pictures}
+									key={`gallery-${housing.id}-${index}`}
+								/>
+								<div className="housing_info">
+									<div className="title-location-tags">
+										<p className="housing_title" aria-label="titre du logement">
+											{housing.title}
+										</p>
+										<p
+											className="housing_location"
+											aria-label="localisation du logement"
+										>
+											{housing.location}
+										</p>
+										<Tags tags={housing.tags} key={`tags-${housing.id}`} />
+									</div>
+									<div className="host-rating">
+										<Host host={housing.host} key={`host-${housing.id}`} />
+										<Rating rate={housing.rating} key={`key-${housing.id}`} />
+									</div>
 								</div>
-								<div className="host-rating">
-									<Host host={housing.host} key={`host-${housing.id}`} />
-									<Rating rate={housing.rating} key={`key-${housing.id}`} />
+								<div className="housing_collapse ">
+									<div className="housing__collapse-block">
+										<Collapse
+											aria="équipements du logement"
+											title="Description"
+											description={housing.description}
+											key={`collapse1-${housing.id}`}
+										/>
+									</div>
+									<div className="housing__collapse-block">
+										<Collapse
+											aria="équipements du logement"
+											title="Equipements"
+											description={housing.equipments}
+											key={`collapse2-${housing.id}`}
+										/>
+									</div>
 								</div>
 							</div>
-							<div className="housing_collapse ">
-								<div className="housing__collapse-block">
-									<Collapse
-										aria="équipements du logement"
-										title="Description"
-										description={housing.description}
-										key={`collapse1-${housing.id}`}
-									/>
-								</div>
-								<div className="housing__collapse-block">
-									<Collapse
-										aria="équipements du logement"
-										title="Equipements"
-										description={housing.equipments}
-										key={`collapse2-${housing.id}`}
-									/>
-								</div>
-							</div>
-						</div>
-					) : null,
-				)}
-				<Footer />
-			</>
-		);
+						) : null,
+					)}
+
+					<Footer />
+				</>
+			);
+		} else {
+			window.location = 'http://localhost:3000/missing-housing';
+			return null;
+		}
 	}
 }
 

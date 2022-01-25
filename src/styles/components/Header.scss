@@ -13,12 +13,14 @@ header {
 }
 
 .header_logo {
-	width: 110.32px;
+	width: 210.32px;
 	height: 68px;
 	left: 100px;
 
 	img {
-		height: 60px;
+		width: 100%;
+		height: auto;
+		object-fit: cover;
 	}
 }
 
@@ -103,6 +105,10 @@ nav-items {
 		padding: 0 20px;
 	}
 
+	.header_logo {
+		width: 145px;
+		height: 47px;
+	}
 	nav {
 		width: 140px;
 	}
@@ -122,14 +128,6 @@ nav-items {
 		}
 	}
 
-	.header_logo {
-		width: 145px;
-		height: 35px;
-
-		img {
-			height: 34px;
-		}
-	}
 	nav {
 		width: 140px;
 		height: 23px;
