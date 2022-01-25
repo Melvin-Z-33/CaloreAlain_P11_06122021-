@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/CaloreAlain_P11_06122021-/static/css/main.d02f9206.css",
+    "main.js": "/CaloreAlain_P11_06122021-/static/js/main.dc2c4285.js",
+    "static/js/787.d38f044a.chunk.js": "/CaloreAlain_P11_06122021-/static/js/787.d38f044a.chunk.js",
+    "static/media/gustavo-alves-YOXSC4zRcxw-unsplash 1.png": "/CaloreAlain_P11_06122021-/static/media/gustavo-alves-YOXSC4zRcxw-unsplash 1.e8cc81c1db153c8dac8c.png",
+    "static/media/IMG.png": "/CaloreAlain_P11_06122021-/static/media/IMG.024f945a990ae17b81b7.png",
+    "index.html": "/CaloreAlain_P11_06122021-/index.html",
+    "main.d02f9206.css.map": "/CaloreAlain_P11_06122021-/static/css/main.d02f9206.css.map",
+    "main.dc2c4285.js.map": "/CaloreAlain_P11_06122021-/static/js/main.dc2c4285.js.map",
+    "787.d38f044a.chunk.js.map": "/CaloreAlain_P11_06122021-/static/js/787.d38f044a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d02f9206.css",
+    "static/js/main.dc2c4285.js"
+  ]
+}
